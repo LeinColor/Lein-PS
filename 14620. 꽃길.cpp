@@ -25,6 +25,7 @@ int update_visited(int x, int y, bool flag)
 
 	return total_cost;
 }
+
 void dfs(int depth, int x, int y, int total_cost)
 {
 	if (depth == 3) {
