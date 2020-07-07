@@ -20,11 +20,9 @@
 .vs
 /ipch
 Debug
-.obj
-.idb
-.pdb
-.vcxproj
-.filters
-.user
-PS.vcxproj
-PS.vcxproj.filters
+*.obj
+*.idb
+*.pdb
+*.vcxproj
+*.filters
+*.user
