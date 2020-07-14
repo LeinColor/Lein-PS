@@ -30,6 +30,7 @@ int main()
 
 	for (int i = 1; i <= N; i++) {
 		int deadline = homeworks[i].d;
+
 		while (deadline >= 1) {
 			if (day[deadline] == 0) {
 				day[deadline] = i;
