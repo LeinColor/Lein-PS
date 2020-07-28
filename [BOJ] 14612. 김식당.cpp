@@ -82,7 +82,6 @@ int main()
 			shift(tables, target_index, count);
 			--count;
 		}
-
 		print(tables, count);
 	}
 
