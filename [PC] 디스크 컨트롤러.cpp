@@ -1,0 +1,53 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <algorithm>
+using namespace std;
+
+vector<vector<int>> jobs;
+struct cmp {
+	bool operator()(const vector<int>& a, const vector<int>& b)
+	{
+		return a[1] > b[1];
+	}
+};
+
+int solution(vector<vector<int>>& jobs)
+{
+	int answer = 0, j = 0, time = 0;
+	sort(jobs.begin(), jobs.end());
+	priority_queue<vector<int>, vector<vector<int>>, cmp> pq;
+	while (j < jobs.size() || !pq.empty()) {
+		if (jobs.size() > j && time >= jobs[j][0]) {
+			pq.push(jobs[j++]);
+			continue;
+		}
+
+		if (!pq.empty()) {
+			time += pq.top()[1];
+			answer += time - pq.top()[0];
+			pq.pop();
+		}
+		else {
+			time = jobs[j][0];
+		}
+	}
+	return answer / jobs.size();
+}
+
+int main()
+{
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+
+	int N;
+	cin >> N;
+	for (int i = 0; i < N; i++) {
+		int start, wait;
+		cin >> start >> wait;
+
+		vector<int> v;
+		v.push_back(start);
+		v.push_back(wait);
+	}
+}
