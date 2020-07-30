@@ -34,20 +34,3 @@ int solution(vector<vector<int>>& jobs)
 	}
 	return answer / jobs.size();
 }
-
-int main()
-{
-	ios_base::sync_with_stdio(false);
-	cin.tie(nullptr);
-
-	int N;
-	cin >> N;
-	for (int i = 0; i < N; i++) {
-		int start, wait;
-		cin >> start >> wait;
-
-		vector<int> v;
-		v.push_back(start);
-		v.push_back(wait);
-	}
-}
