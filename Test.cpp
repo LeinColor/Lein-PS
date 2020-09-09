@@ -12,5 +12,9 @@ vector<int> solution(vector<vector<int> > v) {
     }
     sort(xv.begin(), xv.end());
     sort(yv.begin(), yv.end());
+    if (xv[0] == xv[1]) ans.push_back(xv[2]);
+    else ans.push_back(xv[0]);
+    if (yv[0] == yv[1]) ans.push_back(yv[2]);
+    else ans.push_back(yv[0]);
     return ans;
 }
